@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sandeep Reddy Pidaparthi</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul class="container" style="list-style-type: none;">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="index.html" onclick="window.location.href='index.html#timeline'; return false;">Work</a></li>
+                    <li><a href="index.html" onclick="window.location.href='index.html#portfolio'; return false;">Portfolio</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-rep-radyucsd/">Contact</a></li>
+                </ul>
+            </nav>
+
+        <!-- Work -->
+            <!-- Timeline -->
+            <article id="timeline" class="wrapper style4">
+                <div class="container">
+                    <header>
+                        <h2>Enhancing Market Research Efficiency through Predictive Ratings: A Deep Dive into the Colombian Business Landscape</h2>
+                    </header>
+                    <ul class="timeline" style="list-style-type: none;">
+                        <li>
+                            <div class="timeline-content">
+                                <p>This research paper delves into the development and evaluation of predictive models specifically tailored for rating businesses within the Colombian market, leveraging advanced machine learning techniques to enhance market efficiency through predictive ratings. The study is grounded in the significant role online reviews play in shaping consumer decision-making, underscored by a 2020 BrightLocal survey. With a dataset encompassing 294,462 businesses and eight distinct features, the research primarily focuses on refining the accuracy of business ratings predictions. Through innovative feature creation from existing data, the paper aims to narrow the discrepancy between actual and forecasted ratings, setting a foundation for more reliable and insightful consumer guidance in the digital marketplace.</p>
+                                <p>The initial phase of the study utilizes Logistic Regression and Random Forest models due to their proficiency in binary classification and handling multifaceted datasets. However, recognizing the limitations of these models in capturing non-linear relationships and their struggle with interpretability and overfitting, the research advances towards a customized multi-input deep learning model via TensorFlow's Keras API. This strategic pivot is aimed at accommodating the dataset's complexity, especially in processing the nuanced and high-dimensional data typical of customer reviews. Through a meticulous evaluation involving a combination of 100 TF-IDF features and 22 newly engineered relevant features, the research unveils the deep learning model's superior capability to encapsulate complex, non-linear relationships, offering substantial advancements over traditional methodologies. This paper contributes significantly to predictive analytics, highlighting the pivotal role of deep learning in navigating the intricate landscape of predictive rating systems and underscoring the critical importance of feature engineering and model selection tailored to the dataset's unique attributes.</p>
+                            </div>    
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+        <!-- PDF Viewer -->
+        <div id="pdf-viewer">
+            <embed src="Research/Paper1.pdf" type="application/pdf" width="100%" height="800px" />
+        </div>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

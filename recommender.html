@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sandeep Reddy Pidaparthi</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul class="container" style="list-style-type: none;">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="index.html" onclick="window.location.href='index.html#timeline'; return false;">Work</a></li>
+                    <li><a href="index.html" onclick="window.location.href='index.html#portfolio'; return false;">Portfolio</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-rep-radyucsd/">Contact</a></li>
+                </ul>
+            </nav>
+
+        <!-- Work -->
+            <!-- Timeline -->
+            <article id="timeline" class="wrapper style4">
+                <div class="container">
+                    <header>
+                        <h2>Recommender Systems</h2>
+                    </header>
+                    <p>An Insightful Overview and Core Principles Underpinning My Code Implementation</p>
+                    <ul class="timeline" style="list-style-type: none;">
+                        <li>
+                            <div class="timeline-content">
+                                <h4>The Problem</h4>
+                                <p>The issue is divided into two main parts: regression and classification, using datasets from GoodReads Fantasy Reviews and Beer Reviews, respectively. I was tasked with developing predictive models to analyze how different features—such as review length and temporal aspects for the book reviews, and review characteristics for the beer reviews—affect user ratings. The regression tasks focus on predicting star ratings based on review length and time of review, requiring students to train models, scale features appropriately, and employ techniques like one-hot encoding to improve their predictions. For the classification part, the challenge lies in predicting whether a beer review is positive or negative, with an emphasis on adjusting for class imbalance, calculating precision at various levels, and enhancing the model's performance by incorporating additional data features. This comprehensive assignment not only tested my abilities to apply regression and classification techniques but also encouraged innovation in feature engineering and model evaluation to derive meaningful insights from real-world data.</p>
+                                <h4>The Approach</h4>
+                                <h5>Regression Tasks</h5>
+                                <h6>Predicting Star Ratings from Review Length</h6>
+                                <p>I started by training a simple linear regression model to predict star ratings based on the length of the review. To ensure the feature was appropriately scaled between 0 and 1, I divided the length of each review by the maximum review length found in the dataset. This normalization step helps in improving the model's performance by keeping feature values within a comparable range.</p>
+                                <p>The model coefficients, intercept and slope, along with the mean squared error (MSE) of the model on the entire dataset, were calculated to evaluate the model's performance. These metrics provide insights into the model's accuracy and how well it generalizes across the dataset.</p>
+                                <h6>Model Extension with Temporal Features</h6>
+                                <p>To enhance the model, I incorporated additional features based on the time of the review, using one-hot encoding for the weekday and month. This approach aims to capture any temporal patterns in the ratings, which might be influenced by factors such as seasonal trends or specific days of the week.</p>
+                                <p>For the one-hot encoding, I carefully excluded redundant dimensions, ensuring the feature vector contained no more than 19 dimensions, including the offset term and the length feature. Feature vectors for the first two examples were provided to demonstrate the encoding process.</p>
+                                <h6>Model Training with Direct and One-hot Encoding Features</h6>
+                                <p>Two models were trained: one using the weekday and month values directly as features and another utilizing the one-hot encoding strategy from the previous question. This comparative analysis aimed to assess the impact of feature representation on model performance, with the MSE of each model reported to highlight differences.</p>
+                                <h6>Evaluation on Training and Test Sets</h6>
+                                <p>By splitting the data into 50% training and 50% test sets, I further evaluated the models' robustness and generalizability. After training on the training set, I reported the MSE of both models (one-hot encoding and direct encoding) on the test set, providing a clear comparison of their predictive capabilities on unseen data.</p>
+                                <h4>Code Overview</h4>
+                                    <div class="image-container">
+                                        <img src="images/scale.png" alt="Scaling" style="width: 60%;" />
+                                        <p>Scaling review lengths and predicting ratings with linear regression.</p>
+                                        <img src="images/onehot.png" alt="One Hot Encoding" style="width: 60%;" />
+                                        <p>Enhancing the model with one-hot encoded temporal features.</p>
+                                        <img src="images/mse.png" alt="MSE Comparision" style="width: 60%;" />
+                                        <p>Comparing models using direct and one-hot encoded features based on MSE.</p>
+                                        <img src="images/datasplit.png" alt="Training and Test Split" style="width: 60%;" />
+                                        <p>Evaluating model performance on unseen test data.</p>
+                                    </div>
+                                    <h5>Classification Tasks</h5>
+                                    <h6>Using Previous Logistic Regression</h6>
+                                    <p>Utilizing the beer review dataset, I constructed a label vector to classify reviews as positive or negative based on whether the review score was four or above. A logistic regression model was then fitted to estimate the probability of a rating being positive from the review length, with the class_weight='balanced' option used to address class imbalance.</p>
+                                    <p>The performance of the classifier was assessed by reporting the count of true positives, true negatives, false positives, false negatives, and the balanced error rate (BER), offering a comprehensive view of its effectiveness in classifying reviews.</p>
+                                    <h6>Precision@K Calculation</h6>
+                                    <p>The precision of the classifier at different values of K ({1, 100, 1000, 10000}) was computed to evaluate its precision in identifying the top K most positive reviews accurately. This metric is crucial for understanding the classifier's reliability in practical applications where only the top-ranked predictions might be considered.</p>
+                                    <h6>Predictor Improvement with Additional Features</h6>
+                                    <p>Striving to enhance the classifier's performance, I incorporated additional features such as beer styles and textual analysis into the model. This effort aimed at reducing the BER by leveraging more informative features that could provide deeper insights into the factors influencing positive ratings.</p>
+                                    <p>The improvement achieved through these additional features was described, and the BER of the enhanced predictor was reported, showcasing the effectiveness of these enhancements in improving classification accuracy.</p>
+                                    <h4>Code Overview</h4>
+                                    <div class="image-container">
+                                        <img src="images/Binary.png" alt="Binary" style="width: 60%;" />
+                                        <p>Binarizing review scores to classify as positive or negative.</p>
+                                        <img src="images/Log_reg.png" alt="Logistic Regression" style="width: 60%;" />
+                                        <p>Employing logistic regression to predict review positivity from length</p>
+                                        <img src="images/confusion.png" alt="Confusion Matrix" style="width: 60%;" />
+                                        <p>Assessing classifier performance with confusion matrix and BER.</p>
+                                        <img src="images/kprec.png" alt="K Precision Calculation" style="width: 60%;" />
+                                        <p>Evaluating classifier precision at various K thresholds.</p>
+                                        <img src="images/addfeature.png" alt="Feature Enhancement" style="width: 60%;" />
+                                        <p>Enhancing predictor accuracy with beer styles and sentiment analysis.</p>
+                                        <img src="images/enhanced model.png" alt="Enhanced Model" style="width: 60%;" />
+                                        <p>Reducing BER with a feature-enhanced logistic regression model.</p>
+                                    </div>
+                                    <p>This embarked me on a journey through data analysis and predictive modeling, focusing on the realms of regression and classification within the context of book and beer reviews. The first segment of the tasks involved leveraging the GoodReads Fantasy Reviews dataset to examine the predictive power of review lengths and temporal features on star ratings. This involved training a basic predictor to estimate ratings from normalized review lengths, extending the model to incorporate time-based features through one-hot encoding, and comparing models with different feature sets for their mean squared error (MSE). An additional layer of complexity was introduced by splitting the data into training and test sets to assess the models' performance on unseen data, emphasizing practical skills in data science such as model training, evaluation, and feature engineering.</p>
+                                     <p>The second segment transitioned to classification tasks using the Beer Reviews dataset, aiming to predict whether a review score signified a positive or negative rating based on review characteristics. A logistic regression model was fitted to estimate the binarized score from review length, employing a balanced class weight approach to address potential class imbalances. Precision at various levels (K) was calculated to evaluate the classifier's performance further. In a bid to enhance the predictor and reduce the balanced error rate (BER), additional features were incorporated, including beer styles and textual analysis, showcasing the iterative nature of model improvement and the critical role of feature selection. This homework not only tested the ability to apply theoretical knowledge to practical scenarios but also honed skills in data preprocessing, model optimization, and critical analysis of model performance, preparing students for complex data science challenges.</p>
+                                </div>    
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
