@@ -1,131 +1,517 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Sandeep Reddy Pidaparthi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Sandeep Reddy Pidaparthi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .timeline-content {
+         position: relative;
+        }
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="index.html#top">Introduction</a></li>
-					<li><a href="index.html" onclick="window.location.href='index.html#timeline'; return false;">Work</a></li>
-               		<li><a href="index.html" onclick="window.location.href='index.html#portfolio'; return false;">Portfolio</a></li>
-					<li><a href="https://www.linkedin.com/in/sandeep-r-pidaparthi/">LinkedIn</a></li>
-					<li><a href="mailto:sandeepreddypidaparthi1999@gmail.com">Mail Me</a></li>
-				</ul>
-			</nav>
+        .year {
+        position: absolute;
+        top: 0px; /* Moves the element 20px above its original position */
+        left: -100px; /* Adjust this value based on your design */
+        font-weight: bold;
+        color: #f5f1f1; /* Change the color as per your design */
+        }
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
-							<p style="margin-top: 10px;"><strong>Masters in Business Analytics</strong> University of California, San Diego</p>
-							<p>Phone: 858-346-3979</p>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi,&nbsp;I'm&nbsp;<strong>Sandeep&nbsp;Reddy&nbsp;Pidaparthi</strong></h1>
-							</header>
-							<p>Welcome to my personal space! I'm really excited about everything to do with business analytics. My journey has taken me through a lot of different areas within technology and analytics. I've studied a lot, focusing on how business analytics combines with computer science to solve problems and make things better. I've worked hard to understand both the theory and the practical side of things, always looking to learn more and do more. Take a look around my portfolio to see what I've been up to and where my passion for analytics is taking me next! Your curiosity might just spark our next big adventure together. Let's explore the possibilities and innovate for a brighter future, together.</p>
-						</div>
-					</div>
-				</div>
-			</article>
+        /* Timeline Container */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
 
-		<!-- Timeline -->
-			<article id="timeline" class="wrapper style4">
-				<div class="container">
-					<header>
-						<h2>My Professional Journey</h2>
-					</header>
-					<ul class="timeline">
-						<li>
-							<div class="timeline-content">
-								<h3><a href="infosys.html">Infosys Limited (Systems Engineer)</a></h3>
-								<p> As a Technical Architect for Siemens I led multiple teams on managing and optimizing the growth of the M365 Platform and helped in transitioning multiple high 
-								high complexity business applications to M365 platform </p>
-									
-									<p>As a Systems Engineer I 
+        /* Timeline Item */
+        .timeline ul {
+            padding: 0;
+            margin: 0;
+        }
 
-									developed and optimized power applications, tackling tier 1 issues to enhance system functionality and user experience.
-									Streamlined the contract creation process for 300 sub-companies, significantly reducing time and boosting efficiency.
-									Collaborated on system-oriented projects with complex Power Automate flows, achieving a 10% increase in efficiency across projects.
-									Led workshops on the M365 platform, saving approximately 14 hours per month for 1000 clients through improved user adoption and implementations.
-									Earned an internal certification as a Business Intelligence Associate, thanks to my expertise in handling complex data.
-									</p>
-								
-									<p>During my Internship at Infosys 
-									
-									Led a project to create an alternative to Google Maps, enhancing user experience by reducing search times by 25%.
-									Acquired extensive training in JavaScript, PHP, CSS, C#, .NET, and Angular, laying the groundwork for my future contributions to the team.
-								Which led to me landing a full time offer from the company before I pursued my masters in Business Analytics at University of California, San Diego</p>
-							</div>
-						</li>
-						<li>
-							<div class="timeline-content">
-								<h3><a href="whiteLeo.html">WhiteLeo Industries (Business Analyst)</a></h3>
-								<p>Capitalized on the Covid-19 e-commerce surge, strategically marketing our app to expand reach and ensure sustained growth.
-									Conducted a comprehensive survey of 250 consumers to understand their grocery buying habits and preferences, informing our targeted marketing strategies.</p>
-								<p>In the heart of 2020, I embarked on a two-month journey with White-Leo Industries, immersing myself in the intricate world of comparative research and analysis. 
-									This experience proved to be a crucible for my analytical skills, pushing me to dissect and understand varied market dynamics, consumer behaviors, and strategic industry approaches. 
-									Working alongside a dedicated team, I delved into research projects that sharpened my ability to extract valuable insights from complex data sets, contributing original findings that 
-									met all the internship's criteria. Certified as satisfactory and original, my work at White-Leo Industries was a pivotal milestone, laying a robust foundation in business analytics and 
-									market research that continues to influence my professional path.</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</article>
+        .timeline ul li {
+            list-style-type: none;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Project Portfolio</h2>
-						<p>Recent Projects and Case Studies</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="recommender.html" class="image featured"><img src="images/recommend.jpg" width: 100%; height: auto; /></a>
-								<h3><a href="recommender.html">Predictive Analytics</a></h3>
-								<p>Transforming reviews into insights through data-driven modeling.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="research.html" class="image featured"><img src="images/Research.png" alt="" /></a>
-								<h3><a href="research.html">Research</a></h3>
-								<p>Enhancing Market Efficiency through Predictive Ratings</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="case_studies.html" class="image featured"><img src="images/casestudy.png" alt="" /></a>
-								<h3><a href="case_studies.html">Case Studies</a></h3>
-								<p>AI case studies: Unlocking data's potential</p>
-							</article>
-						</div>
+        .timeline ul li .timeline-content {
+            background: #2f2f2f;
+            padding: 20px;
+            border-radius: 8px;
+            color: #ffffff;
+        }
 
-<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        /* Timeline Line */
+        .timeline ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: #f49542;
+            border-radius: 50%;
+        }
 
-	</body>
+        .timeline ul li:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 30px;
+            height: 100%;
+            width: 4px;
+            background-color: #f49542;
+        }
+
+        /* Timeline Headings */
+        .timeline ul li h3 {
+            margin: 0;
+            padding: 0;
+            color: #f49542;
+        }
+
+        /* Media Query for Smaller Screens */
+        @media (max-width: 768px) {
+            .timeline {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .timeline ul li {
+                padding-left: 30px;
+            }
+
+            .timeline ul li::before,
+            .timeline ul li::after {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="container">
+            <li><a href="index.html#top">Introduction</a></li>
+            <li><a href="index.html" onclick="window.location.href='index.html#timeline'; return false;">Work</a></li>
+            <li><a href="index.html" onclick="window.location.href='index.html#projects'; return false;">Projects</a></li>
+            <li><a href="https://www.linkedin.com/in/sandeep-r-pidaparthi/">LinkedIn</a></li>
+            <li><a href="index.html" onclick="window.location.href='index.html#contact'; return false;">Contact Me</a></li>        </ul>
+    </nav>
+
+    <!-- Home -->
+    <article id="top" class="wrapper style1">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-5-large col-12-medium">
+                    <span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
+                    <p style="margin-top: 10px;"><strong>Masters in Business Analytics</strong> University of California, San Diego</p>
+                    <p>Phone: 858-346-3979</p>
+                </div>
+                <div class="col-8 col-7-large col-12-medium">
+                    <header>
+                        <h1>Hi,&nbsp;I'm&nbsp;<strong>Sandeep&nbsp;Reddy&nbsp;Pidaparthi</strong></h1>
+                    </header>
+                    <p>Welcome to my personal space. My journey in life has been deeply rooted in a growing passion for business analytics and data. Through various academic and professional experiences, I've focused on understanding how business analytics can be applied to solve real-world problems. This field, which combines my background in computer science with data-driven decision-making, has become a central part of my life. My work reflects this passion, as I continuously strive to learn more and apply my knowledge to practical challenges. Feel free to explore my portfolio to see how my experiences have shaped my approach to analytics and where this path is taking me.</p>                </div>
+            </div>
+        </div>
+    </article>
+
+<!-- Roles and Jobs Applied -->
+<article id="jobs" class="wrapper style3">
+    <div class="container">
+            <header>
+                    <h2>Roles I'm Applying To: </h2>
+            </header>
+            <div class="row">
+                    <div class="col-12 col-12-medium">
+                            <ul style="font-size: 20px; list-style-type: none;">
+                                    <li><strong>Data Analyst</strong></li>
+                                    <li><strong>Business Intelligence Associate</strong></li>
+                                    <li><strong>Business Analyst</strong></li>
+                                    <li><strong>Sharepoint Developer</strong></li>
+                                    <li><strong>Power Developer</strong></li>
+                            </ul>
+                    </div>
+            </div>
+    </div>
+</article>
+
+
+   <!-- Timeline -->
+<article id="timeline" class="wrapper style4">
+    <div class="container">
+        <header>
+            <h2>My Professional Journey</h2>
+        </header>
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div class="timeline-left-content">
+                        <div class="year">2024</div> <!-- Year on the left side -->
+                        <h3>Dexwell Inc, Carlsbad (Data Analyst)</h3>
+                        <p>Conducted comprehensive research on seawall integrity, identifying 15+ critical factors influencing their durability.
+                            Developed a detailed market analysis report, incorporating geospatial data to highlight buyer patterns and growth projections, with
+                            a projected 20% increase in seawall service demand over the next five years.
+                            Employed the XGBoost Time Series Model to create a predictive framework for monitoring seawater conditions, achieving 95%
+                            accuracy in predictive insights.
+                            Developed a comprehensive business model, including 5 detailed customer personas, cost analysis, and 3 pricing strategies,
+                            leading to a 15% increase in revenue projections.
+                        </p>
+                    </div>
+                    <div class="timeline-content">
+                        <!-- This is where right-side content would go if needed -->
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-left-content">
+                        <div class="year">2023</div> <!-- Year on the left side -->
+                        <h3>University of California SanDiego, California MSBA</h3>
+                        <p>Joined Masters in Business Analytics program at UCSD, focusing on data analysis, machine learning, and business intelligence.
+                            Developed a comprehensive understanding of data visualization, data mining, and predictive modeling.
+                            Conducted a capstone project on the impact of Seawalls for a potential Multi-Million dollar project with 10,000+ data points to identify
+                            key trends and insights.
+                            Earned a certification in Python, SQL, and Tableau, enhancing my data analysis and visualization skills.
+                            Conducted a comprehensive analysis of the e-commerce industry, identifying key trends and insights to inform strategic decision-making.
+                            Developed a predictive model for customer churn, achieving 85% accuracy in predicting customer behavior.
+                            Conducted a comprehensive analysis of the e-commerce industry, identifying key trends and insights to inform strategic decision-making.
+                            Developed a predictive model for customer churn, achieving 85% accuracy in predicting customer behavior.
+                        </p>
+                    </div>
+                    <div class="timeline-content">
+                        <!-- This is where right-side content would go if needed -->
+                    </div>
+                </li>
+
+                <li>
+                    <div class="timeline-left-content">
+                        <div class="year">2022</div> <!-- Year on the left side -->
+                        <h3>Infosys Limited, Hyderabad (Systems Engineer)</h3>
+                        <p>Led multiple teams in managing and optimizing the M365 Platform, including the successful transition of several high-complexity business applications to the platform.
+                            Enhanced system functionality and user experience by addressing Tier 1 issues and optimizing power applications.
+                            Streamlined the contract creation process for 300 sub-companies, significantly reducing time and increasing efficiency.
+                            Collaborated on complex projects using Power Automate, resulting in a 10% increase in project efficiency.
+                            Conducted workshops that improved user adoption and implementations, saving approximately 14 hours per month for 1,000 clients.
+                            Earned an internal certification as a Business Intelligence Associate, recognized for handling complex data.
+                            Led a project to create an alternative to Google Maps, reducing search times by 25% and enhancing user experience.
+                            Acquired extensive training in JavaScript, PHP, CSS, C#, .NET, and Angular, forming the foundation for future contributions.
+                        </p>
+                    </div>
+                    <div class="timeline-content">
+                        <!-- This is where right-side content would go if needed -->
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-left-content">
+                        <div class="year">2021</div> <!-- Year on the left side -->
+                        <h3>University of Petroleum and Energy Studies, India, Btech CSE</h3>
+                        <p>Graduated with a Bachelor of technology in Computer Science Engineering with specialization in Business Analytics and Optimization.
+                            Won 4th Place in Techstars startup weekend, developing a business plan for a new app which would solve the problem of food wastage in the University with a potential usage of 10,000+ customers.
+                            A member of Smart Analyzers a club totally dedicated to data analysis and visualization.
+                            A member of Computer Society of India (CSI) which is a professional body where I learned about the latest trends in technology.
+                            Treasure Hunt Runner up in the University Fest.
+                        </p>
+                    </div>
+                    <div class="timeline-content">
+                        <!-- This is where right-side content would go if needed -->
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-left-content">
+                        <div class="year">2020</div> <!-- Year on the left side -->
+                        <h3>WhiteLeo Industries,Raipur (Business Analyst)</h3>
+                        <p>Capitalized on the Covid-19 e-commerce surge, strategically marketing our app to expand reach and ensure sustained growth.
+                            Conducted a comprehensive survey of 250 consumers to understand their grocery buying habits and preferences, informing our targeted marketing strategies.
+                            In the heart of 2020, I embarked on a two-month journey with White-Leo Industries, immersing myself in the intricate world of comparative research and analysis.
+                        </p>
+                    </div>
+                    <div class="timeline-content">
+                        <!-- This is where right-side content would go if needed -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+
+<!-- Skills and Talents -->
+<article id="skills" class="wrapper style3">
+    <div class="container">
+        <header>
+            <h2>Skills and Talents</h2>
+        </header>
+        <div class="row">
+            <div class="col-6 col-12-medium">
+                <h3>Technical Skills</h3>
+                <ul style="font-size: 20px;">
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Statistical Analysis</li>
+                    <li>Data Visualization</li>
+                    <li>Excel</li>
+                    <li>Power Automate</li>
+                    <li>Power Apps</li>
+                </ul>
+            </div>
+            <div class="col-6 col-12-medium">
+                <h3>Soft Skills</h3>
+                <ul style="font-size: 20px;">
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Leadership</li>
+                    <li>Time Management</li>
+                    <li>Adaptability</li>
+                    <li>Creativity</li>
+                    <li>Decision Making</li>
+                    <li>Conflict Resolution</li>
+                    <li>Emotional Intelligence</li>
+                    <li>Networking</li>
+                    <li>Public Speaking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- Certifications -->
+<article id="certifications" class="wrapper style4">
+    <div class="container">
+        <header>
+            <h2>Certifications</h2>
+        </header>
+        <div class="row">
+            <div class="col-6 col-12-medium">
+                <h3>Google Certified Data Analyst</h3>
+                <p><a href="https://coursera.org/share/386e975ee5ce23a6f433b9aba88c6208">View Certification</a></p>
+            </div>
+            <div class="col-6 col-12-medium">
+                <h3>SAS Certification</h3>
+                <p><a href="https://coursera.org/share/88cb9465fb2e7a0b0ff397118ed6ee4a">View Certification</a></p>
+            </div>
+            <div class="col-6 col-12-medium">
+                <h3>Tableau Certification</h3>
+                <p><a href="https://coursera.org/share/9a36299916715377c96256a64359fb2b">View Certification</a></p>
+            </div>
+            <div class="col-6 col-12-medium">
+                <h3>Python</h3>
+                <p><a href="https://courses.cognitiveclass.ai/certificates/b10cd3ad83a74deca3d93308203039f9">View Certification</a></p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Projects -->
+<article id="projects" class="wrapper style2">
+    <div class="container">
+        <header>
+            <h2>Projects</h2>
+        </header>
+        <div class="row project-row">
+            <!-- Project 1 -->
+            <div class="col-12 col-12-medium project">
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <div class="project-screenshot">
+                            <img src="images/project1.jpg" alt="SeaPULSE" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <div class="project-content">
+                            <h3>SeaPULSE: Enhancing Coastal Protection Through Predictive Analytics</h3>
+                            <p>
+                                The project focused on utilizing Dexwell's SeaPULSE platform to advance coastal protection by monitoring seawater conditions. The Rady School of Business interns conducted comprehensive research on seawalls and employed various advanced techniques to create a predictive framework. This framework leveraged data from seawater sensors, geospatial mapping, and machine learning models, such as the XGBoost Time Series Model, to anticipate and mitigate potential seawall issues. The project also involved developing a detailed market analysis report, business model, and strategic market entry plan, providing crucial insights for seawall maintenance and construction.
+                                <br><br>
+                                <strong>Team mates:</strong> Vishnu Mohan, Divyamsi Kunapareddy, Xintong Chen<br>
+                                <strong>Used Technologies:</strong> SeaPULSE Platform, Geospatial Mapping, Machine Learning, XGBoost Time Series Model
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-12 col-12-medium project">
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <div class="project-screenshot">
+                            <img src="images/project2.jpg" alt="Colombian Business Landscape" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <div class="project-content">
+                            <h3>Enhancing Market Efficiency through Predictive Ratings: A Deep Dive into the Colombian Business Landscape</h3>
+                            <p>
+                                This research paper explores the development and evaluation of predictive models for rating businesses in Colombia, focusing on the utilization of various machine learning techniques. The study emphasizes the creation of new features from existing data to improve the predictive accuracy of business ratings. The project initially employs Logistic Regression and Random Forest models but transitions to a custom-built multi-input deep learning model using TensorFlow's Keras API to handle the dataset's complexity, particularly excelling in processing high-dimensional and diverse customer review data.                                <br><br>
+                                <strong>Team mates:</strong> Akhil Chitta, Abhinay Vemulapalli<br>
+                                <strong>Used Technologies:</strong> TensorFlow's Keras API, Logistic Regression, Random Forest, Deep Learning, TF-IDF
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button id="load-more-projects" class="button fit" style="margin-top: 40px; background-color: black; color: white; margin-left: auto; margin-right: auto; display: block; ">Load More Projects</button>
+                </div>
+            </div>
+    </div>
+</article>
+
+<!-- Additional Projects -->
+<article id="additional-projects" class="wrapper style2" style="display: none;">
+    <div class="container">
+        <div class="row project-row">
+
+            <!-- Project 3 -->
+            <div class="col-12 col-12-medium project">
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <div class="project-screenshot">
+                            <img src="images/project3.jpg" alt="Churn Reduction" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <div class="project-content">
+                            <h3>Samsung Mobile: Reducing Churn</h3>
+                            <p>
+                                This project focused on predicting customer responses and profitability through various machine learning techniques. The analysis involved the use of regression, neural networks, random forests, and XGBoost models to forecast customer reactions to marketing campaigns. The models were fine-tuned for optimal predictive accuracy, and individualized customer predictions were crafted to enhance engagement strategies. This approach resulted in a significant profit increase, totaling $802,010.                                <br><br>
+                                <strong>Team mates:</strong> Akhil Chitta, Ridhima Bansal, Alabhya Dahal<br>
+                                <strong>Used Technologies:</strong> Regression, Neural Networks, Random Forest, XGBoost
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="col-12 col-12-medium project">
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <div class="project-screenshot">
+                            <img src="images/project4.jpg" alt="Uplift Modelling" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <div class="project-content">
+                            <h3>Enhancing Campaign Efficiency: Uplift Modelling</h3>
+                            <p>
+                                In this project, uplift modeling was employed to improve the accuracy and profitability of customer segmentation and marketing campaigns. The project integrated control and treatment datasets, ensuring balanced data through stratified sampling. Logistic Regression and Random Forest algorithms were utilized to achieve a 15% improvement in accuracy. An incremental profit analysis showed a 20% increase in profitability using uplift models compared to propensity models. Additionally, the project formulated optimal customer segmentation strategies, enhancing campaign efficiency by 25%.                                <br><br>
+                                <strong>Team mates:</strong> Akhil Chitta, Ridhima Bansal, Alabhya Dahal<br>
+                                <strong>Used Technologies:</strong> Logistic Regression, Random Forest, Uplift Modeling
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-12 col-12-medium project">
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <div class="project-screenshot">
+                            <img src="images/project5.jpg" alt="School Perfomance" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <div class="project-content">
+                            <h3>Analyzing School Performance: SAT Scores and Mathematics Proficiency</h3>
+                            <p>
+                                This project focuses on analyzing school performance by utilizing data from a CSV file containing information about schools. The study involves several stages, starting with the calculation of top-performing schools based on average math scores. It then extends to the aggregation and analysis of total SAT scores across different schools and boroughs. The project employs data sorting, filtering, and statistical aggregation techniques to identify schools with high SAT scores and examine borough-level variations in performance.                                <br><br>
+                                <strong>Used Technologies:</strong> Python, Pandas, Data Aggregation, Statistical Analysis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-12 col-12-medium project">
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <div class="project-screenshot">
+                            <img src="images/project6.jpg" alt="Netflix" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <div class="project-content">
+                            <h3>Analyzing Netflix Movie Data: A Focus on 1990s Action Films</h3>
+                            <p>
+                                This project involves analyzing a dataset containing Netflix movie information, specifically focusing on movies released in the 1990s. The study includes filtering the dataset to isolate movies from 1990 to 1999 and analyzing the distribution of movie durations. Special attention is given to the count of action movies with a duration of less than 90 minutes during this decade. The project utilizes data exploration, filtering, and basic statistical analysis to derive insights from the Netflix dataset.                                <br><br>
+                                <strong>Used Technologies:</strong> Python, Pandas, Data Filtering, Statistical Analysis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</article>
+
+
+<script>
+    // Load More Projects Button Click Event
+    document.getElementById("load-more-projects").addEventListener("click", function() {
+        document.getElementById("additional-projects").style.display = "block";
+        document.getElementById("load-more-projects").style.display = "none";
+    });
+</script>
+
+<!-- Contact Me -->
+<article id="contact" class="wrapper style5">
+    <div class="container">
+        <header>
+            <h2>Contact Me</h2>
+        </header>
+        <div class="row">
+            <div class="col-12">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="1c6c85d9-ac54-4236-abd8-8493c676ba29">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-xsmall">
+                            <input type="text" name="name" id="name" placeholder="Name" required />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="email" name="email" id="email" placeholder="Email" required />
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><input type="submit" class="primary" style="background-color: black;" /></li>
+                                <li><input type="reset" value="Reset" style="background-color: black;" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
-			
