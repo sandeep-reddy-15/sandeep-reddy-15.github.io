@@ -112,12 +112,6 @@ input[type="button"]:active,
     line-height: 1.5;
 }
 
-.terminal-block li::before {
-    content: '$ ';
-    color: #f49542;
-    margin-right: 0.5em;
-}
-
 /* Update skills list to look like tags */
 #skills .skills-list {
     list-style: none;

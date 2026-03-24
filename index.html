@@ -371,7 +371,7 @@
         <div class="row">
             <div class="col-12">
                 <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="1c6c85d9-ac54-4236-abd8-8493c676ba29">
+                    <input type="hidden" name="access_key" id="access_key">
                     <div class="row gtr-uniform">
                         <div class="col-6 col-12-xsmall">
                             <input type="text" name="name" id="name" placeholder="Name" required />
@@ -390,6 +390,10 @@
                         </div>
                     </div>
                 </form>
+                <script>
+                    // Access Key change
+                    document.getElementById("access_key").value = atob("MWM2Yzg1ZDktYWM1NC00MjM2LWFiZDgtODQ5M2M2NzZiYTI5");
+                </script>
             </div>
         </div>
     </div>
