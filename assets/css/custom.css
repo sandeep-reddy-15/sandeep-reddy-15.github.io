@@ -1,0 +1,115 @@
+/* Custom Timeline Styles from inline <style> tag */
+.timeline-content {
+    position: relative;
+}
+
+.year {
+    position: absolute;
+    top: 0px;
+    left: -100px; /* Adjust this value based on your design */
+    font-weight: bold;
+    color: #f5f1f1;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Timeline Item */
+.timeline ul {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* The original file had a .timeline-content rule, but the HTML uses .timeline-left-content for the styled boxes. */
+.timeline ul li .timeline-left-content {
+    background: #2f2f2f;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+/* Timeline Line */
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: #f49542;
+    border-radius: 50%;
+}
+
+.timeline ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 30px;
+    height: 100%;
+    width: 4px;
+    background-color: #f49542;
+}
+
+/* Timeline Headings */
+.timeline ul li h3 {
+    margin: 0;
+    padding: 0;
+    color: #f49542;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .timeline ul li {
+        padding-left: 30px;
+    }
+
+    .timeline ul li::before,
+    .timeline ul li::after {
+        left: 10px;
+    }
+
+    .year {
+        position: relative;
+        left: 0;
+        top: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Utility classes from moved inline styles */
+#jobs .feature-list {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+#skills .skills-list {
+    font-size: 20px;
+}
+
+.load-more {
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+}
+
+#contact .button-custom {
+    background-color: black;
+}

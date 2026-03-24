@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+/* General "techy" overrides */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-family: 'Source Code Pro', monospace;
+}
+
+strong {
+	color: #f49542;
+}
+
+a {
+    color: #f49542;
+}
+
+a:hover {
+    color: #ffad66 !important;
+}
+
+hr {
+    border-top-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.05);
+}
+
+/* Override wrapper styles for dark theme */
+.wrapper.style1, .wrapper.style2, .wrapper.style3 {
+    text-shadow: none;
+}
+
+.wrapper.style1 {
+    background-color: #121212; /* Deepest dark */
+}
+
+.wrapper.style2 {
+    background-color: #1e1e1e; /* Slightly lighter dark */
+}
+
+.wrapper.style3 {
+    background-color: #2a2a2a; /* Even lighter */
+}
+
+.wrapper.style4 {
+    background-color: #1a1a1a;
+    color: #b3b3b3;
+}
+
+#nav {
+    background-color: rgba(26, 26, 26, 0.95); /* Dark, slightly transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#nav a.active:before {
+    border-top-color: #1a1a1a;
+}
+
+/* Techy button style */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid #f49542;
+    color: #f49542 !important;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+    background-color: rgba(244, 149, 66, 0.1);
+    color: #ffad66 !important;
+    border-color: #ffad66;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.button:active {
+    background-color: rgba(244, 149, 66, 0.2);
+}
+
+/* Terminal-like block for roles */
+.terminal-block {
+    background-color: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5em;
+    font-family: 'Source Code Pro', monospace;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+.terminal-block ul {
+    list-style: none;
+    padding-left: 0;
+	margin-bottom: 0;
+}
+
+.terminal-block li {
+    padding-left: 0;
+    line-height: 1.5;
+}
+
+.terminal-block li::before {
+    content: '$ ';
+    color: #f49542;
+    margin-right: 0.5em;
+}
+
+/* Update skills list to look like tags */
+#skills .skills-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills .skills-list li {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-family: 'Source Code Pro', monospace;
+	padding-left: 15px;
+}

@@ -5,93 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        .timeline-content {
-         position: relative;
-        }
-
-        .year {
-        position: absolute;
-        top: 0px; /* Moves the element 20px above its original position */
-        left: -100px; /* Adjust this value based on your design */
-        font-weight: bold;
-        color: #f5f1f1; /* Change the color as per your design */
-        }
-
-        /* Timeline Container */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-
-        /* Timeline Item */
-        .timeline ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        .timeline ul li {
-            list-style-type: none;
-            margin-bottom: 20px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .timeline ul li .timeline-content {
-            background: #2f2f2f;
-            padding: 20px;
-            border-radius: 8px;
-            color: #ffffff;
-        }
-
-        /* Timeline Line */
-        .timeline ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            height: 20px;
-            width: 20px;
-            background-color: #f49542;
-            border-radius: 50%;
-        }
-
-        .timeline ul li:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 8px;
-            top: 30px;
-            height: 100%;
-            width: 4px;
-            background-color: #f49542;
-        }
-
-        /* Timeline Headings */
-        .timeline ul li h3 {
-            margin: 0;
-            padding: 0;
-            color: #f49542;
-        }
-
-        /* Media Query for Smaller Screens */
-        @media (max-width: 768px) {
-            .timeline {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .timeline ul li {
-                padding-left: 30px;
-            }
-
-            .timeline ul li::before,
-            .timeline ul li::after {
-                left: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/techy.css" />
 </head>
 <body class="is-preload">
 
@@ -99,10 +14,10 @@
     <nav id="nav">
         <ul class="container">
             <li><a href="index.html#top">Introduction</a></li>
-            <li><a href="index.html" onclick="window.location.href='index.html#timeline'; return false;">Work</a></li>
-            <li><a href="index.html" onclick="window.location.href='index.html#projects'; return false;">Projects</a></li>
+            <li><a href="#timeline">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="https://www.linkedin.com/in/sandeep-r-pidaparthi/">LinkedIn</a></li>
-            <li><a href="index.html" onclick="window.location.href='index.html#contact'; return false;">Contact Me</a></li>        </ul>
+            <li><a href="#contact">Contact Me</a></li>        </ul>
     </nav>
 
     <!-- Home -->
@@ -116,29 +31,29 @@
                 </div>
                 <div class="col-8 col-7-large col-12-medium">
                     <header>
-                        <h1>Hi,&nbsp;I'm&nbsp;<strong>Sandeep&nbsp;Reddy&nbsp;Pidaparthi</strong></h1>
+                        <h1>Hi, I'm <strong>Sandeep</strong></h1>
                     </header>
                     <p>Welcome to my personal space. My journey in life has been deeply rooted in a growing passion for business analytics and data. Through various academic and professional experiences, I've focused on understanding how business analytics can be applied to solve real-world problems. This field, which combines my background in computer science with data-driven decision-making, has become a central part of my life. My work reflects this passion, as I continuously strive to learn more and apply my knowledge to practical challenges. Feel free to explore my portfolio to see how my experiences have shaped my approach to analytics and where this path is taking me.</p>                </div>
             </div>
         </div>
     </article>
 
-<!-- Roles and Jobs Applied -->
 <article id="jobs" class="wrapper style3">
     <div class="container">
             <header>
-                    <h2>Roles I'm Applying To: </h2>
+                    <h2>Target Roles</h2>
             </header>
             <div class="row">
-                    <div class="col-12 col-12-medium">
-                            <ul style="font-size: 20px; list-style-type: none;">
-                                    <li><strong>Data Analyst</strong></li>
-                                    <li><strong>Business Intelligence Associate</strong></li>
-                                    <li><strong>Business Analyst</strong></li>
-                                    <li><strong>Sharepoint Developer</strong></li>
-                                    <li><strong>Power Developer</strong></li>
+                <div class="col-12">
+                    <div class="terminal-block">
+                            <ul>
+                                    <li>Network Engineering</li>
+                                    <li>Data Analyst</li>
+                                    <li>Business Analyst</li>
+                                    <li>Sharepoint Developer</li>
                             </ul>
                     </div>
+                </div>
             </div>
     </div>
 </article>
@@ -154,7 +69,7 @@
             <ul>
                 <li>
                     <div class="timeline-left-content">
-                        <div class="year">2024</div> <!-- Year on the left side -->
+                        <div class="year">2024</div>
                         <h3>Dexwell Inc, Carlsbad (Data Analyst)</h3>
                         <p>Conducted comprehensive research on seawall integrity, identifying 15+ critical factors influencing their durability.
                             Developed a detailed market analysis report, incorporating geospatial data to highlight buyer patterns and growth projections, with
@@ -165,13 +80,10 @@
                             leading to a 15% increase in revenue projections.
                         </p>
                     </div>
-                    <div class="timeline-content">
-                        <!-- This is where right-side content would go if needed -->
-                    </div>
                 </li>
                 <li>
                     <div class="timeline-left-content">
-                        <div class="year">2023</div> <!-- Year on the left side -->
+                        <div class="year">2023</div> 
                         <h3>University of California SanDiego, California MSBA</h3>
                         <p>Joined Masters in Business Analytics program at UCSD, focusing on data analysis, machine learning, and business intelligence.
                             Developed a comprehensive understanding of data visualization, data mining, and predictive modeling.
@@ -184,14 +96,11 @@
                             Developed a predictive model for customer churn, achieving 85% accuracy in predicting customer behavior.
                         </p>
                     </div>
-                    <div class="timeline-content">
-                        <!-- This is where right-side content would go if needed -->
-                    </div>
                 </li>
 
                 <li>
                     <div class="timeline-left-content">
-                        <div class="year">2022</div> <!-- Year on the left side -->
+                        <div class="year">2022</div>
                         <h3>Infosys Limited, Hyderabad (Systems Engineer)</h3>
                         <p>Led multiple teams in managing and optimizing the M365 Platform, including the successful transition of several high-complexity business applications to the platform.
                             Enhanced system functionality and user experience by addressing Tier 1 issues and optimizing power applications.
@@ -203,13 +112,10 @@
                             Acquired extensive training in JavaScript, PHP, CSS, C#, .NET, and Angular, forming the foundation for future contributions.
                         </p>
                     </div>
-                    <div class="timeline-content">
-                        <!-- This is where right-side content would go if needed -->
-                    </div>
                 </li>
                 <li>
                     <div class="timeline-left-content">
-                        <div class="year">2021</div> <!-- Year on the left side -->
+                        <div class="year">2021</div>
                         <h3>University of Petroleum and Energy Studies, India, Btech CSE</h3>
                         <p>Graduated with a Bachelor of technology in Computer Science Engineering with specialization in Business Analytics and Optimization.
                             Won 4th Place in Techstars startup weekend, developing a business plan for a new app which would solve the problem of food wastage in the University with a potential usage of 10,000+ customers.
@@ -218,21 +124,15 @@
                             Treasure Hunt Runner up in the University Fest.
                         </p>
                     </div>
-                    <div class="timeline-content">
-                        <!-- This is where right-side content would go if needed -->
-                    </div>
                 </li>
                 <li>
                     <div class="timeline-left-content">
-                        <div class="year">2020</div> <!-- Year on the left side -->
+                        <div class="year">2020</div>
                         <h3>WhiteLeo Industries,Raipur (Business Analyst)</h3>
                         <p>Capitalized on the Covid-19 e-commerce surge, strategically marketing our app to expand reach and ensure sustained growth.
                             Conducted a comprehensive survey of 250 consumers to understand their grocery buying habits and preferences, informing our targeted marketing strategies.
                             In the heart of 2020, I embarked on a two-month journey with White-Leo Industries, immersing myself in the intricate world of comparative research and analysis.
                         </p>
-                    </div>
-                    <div class="timeline-content">
-                        <!-- This is where right-side content would go if needed -->
                     </div>
                 </li>
             </ul>
@@ -250,7 +150,7 @@
         <div class="row">
             <div class="col-6 col-12-medium">
                 <h3>Technical Skills</h3>
-                <ul style="font-size: 20px;">
+                <ul class="skills-list">
                     <li>Python</li>
                     <li>R</li>
                     <li>SQL</li>
@@ -267,19 +167,10 @@
             </div>
             <div class="col-6 col-12-medium">
                 <h3>Soft Skills</h3>
-                <ul style="font-size: 20px;">
-                    <li>Problem Solving</li>
+                <ul class="skills-list">
                     <li>Communication</li>
-                    <li>Teamwork</li>
-                    <li>Leadership</li>
-                    <li>Time Management</li>
-                    <li>Adaptability</li>
-                    <li>Creativity</li>
                     <li>Decision Making</li>
                     <li>Conflict Resolution</li>
-                    <li>Emotional Intelligence</li>
-                    <li>Networking</li>
-                    <li>Public Speaking</li>
                 </ul>
             </div>
         </div>
@@ -321,7 +212,7 @@
             <h2>Projects</h2>
         </header>
         <div class="row project-row">
-            <!-- Project 1 -->
+            <!-- Project 1 (Wrapped in .project) -->
             <div class="col-12 col-12-medium project">
                 <div class="row">
                     <div class="col-6 col-12-small">
@@ -343,7 +234,7 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 2 (Wrapped in .project) -->
             <div class="col-12 col-12-medium project">
                 <div class="row">
                     <div class="col-6 col-12-small">
@@ -365,7 +256,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button id="load-more-projects" class="button fit" style="margin-top: 40px; background-color: black; color: white; margin-left: auto; margin-right: auto; display: block; ">Load More Projects</button>
+                    <button id="load-more-projects" class="button fit load-more">Load More Projects</button>
                 </div>
             </div>
     </div>
@@ -376,7 +267,7 @@
     <div class="container">
         <div class="row project-row">
 
-            <!-- Project 3 -->
+            <!-- Project 3 (Wrapped in .project) -->
             <div class="col-12 col-12-medium project">
                 <div class="row">
                     <div class="col-6 col-12-small">
@@ -396,7 +287,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Project 4 -->
+            <!-- Project 4 (Wrapped in .project) -->
             <div class="col-12 col-12-medium project">
                 <div class="row">
                     <div class="col-6 col-12-small">
@@ -417,7 +308,7 @@
                 </div>
             </div>
 
-            <!-- Project 5 -->
+            <!-- Project 5 (Wrapped in .project) -->
             <div class="col-12 col-12-medium project">
                 <div class="row">
                     <div class="col-6 col-12-small">
@@ -437,7 +328,7 @@
                 </div>
             </div>
 
-            <!-- Project 6 -->
+            <!-- Project 6 (Wrapped in .project) -->
             <div class="col-12 col-12-medium project">
                 <div class="row">
                     <div class="col-6 col-12-small">
@@ -493,8 +384,8 @@
                         </div>
                         <div class="col-12">
                             <ul class="actions">
-                                <li><input type="submit" class="primary" style="background-color: black;" /></li>
-                                <li><input type="reset" value="Reset" style="background-color: black;" /></li>
+                                <li><input type="submit" class="primary button-custom" /></li>
+                                <li><input type="reset" value="Reset" class="button-custom" /></li>
                             </ul>
                         </div>
                     </div>
@@ -508,9 +399,7 @@
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
